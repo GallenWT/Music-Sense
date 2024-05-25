@@ -8,8 +8,20 @@
 import SwiftUI
 
 struct HomeScreenView: View {
+    @State private var isMenuOpen: Bool = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            
+            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            VStack{
+                Spacer()
+                NavigationLink(destination: LearnMusicView()){
+                    Text("Learn Music View")
+                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                }
+            }
+        }
     }
 }
 

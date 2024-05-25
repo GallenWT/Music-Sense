@@ -19,14 +19,20 @@ struct MusicCardViewBox: View {
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 150, height: 150)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
-                        Text(music.judulMusic)
-                            .font(.custom("Raleway", size: 32))
-                            .fontWeight(.semibold)
-                            .lineLimit(1)
-                        Text(music.singerMusic)
-                            .font(.custom("Raleway", size: 14))
-                            .fontWeight(.regular)
-                            .lineLimit(1)
+                        VStack(alignment: .leading) {
+                            Text(music.judulMusic)
+                                .font(.custom("Raleway", size: 32))
+                                .fontWeight(.semibold)
+                                .lineLimit(1)
+                                .multilineTextAlignment(.leading)
+                                .foregroundColor(.white)
+                            Text(music.singerMusic)
+                                .font(.custom("Raleway", size: 14))
+                                .fontWeight(.regular)
+                                .lineLimit(1)
+                                .foregroundColor(.white)
+                        }
+//                        .frame(width: 150)
                     }
                 }
             }
@@ -53,6 +59,9 @@ struct MusicCardViewRec: View {
                             .font(.custom("Raleway", size: 32))
                             .fontWeight(.semibold)
                             .lineLimit(1)
+//                            .multilineTextAlignment(.leading)
+//                            .frame(width:250)
+                            
                         Text(music.singerMusic)
                             .font(.custom("Raleway", size: 14))
                             .fontWeight(.regular)

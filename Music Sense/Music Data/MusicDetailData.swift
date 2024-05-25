@@ -32,7 +32,7 @@ let recommendedMusic = [
 let trendingMusic = [
     MusicDetail(judulMusic: "I Had Some Help", coverMusic: "iHadSomeHelp", singerMusic: "Post Malone ft Morgan Wallen"),
     MusicDetail(judulMusic: "Not Like Us", coverMusic: "notLikeUs", singerMusic: "Kendrick Lamar"),
-    MusicDetail(judulMusic: "Million Dollar Baby", coverMusic: "millionDollarBaby", singerMusic: ""),
+    MusicDetail(judulMusic: "Million Dollar Baby", coverMusic: "millionDollarBaby", singerMusic: "Rommy Richman"),
     MusicDetail(judulMusic: "A Bar Song", coverMusic: "aBarSong", singerMusic: "Shabozey"),
     MusicDetail(judulMusic: "Beatiful Things", coverMusic: "beatifulThings", singerMusic: "Benson Boone"),
     MusicDetail(judulMusic: "Lose Control", coverMusic: "loseControl", singerMusic: "Teddy Swims"),

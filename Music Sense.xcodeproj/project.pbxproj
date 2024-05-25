@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E81D349A2C010AEA006557CD /* testCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D34992C010AEA006557CD /* testCode.swift */; };
+		E81D349C2C010C7D006557CD /* LearnMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D349B2C010C7D006557CD /* LearnMusicView.swift */; };
+		E81D349E2C010C8C006557CD /* ChordLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D349D2C010C8C006557CD /* ChordLibraryView.swift */; };
+		E81D34A02C010C9C006557CD /* MetronomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D349F2C010C9C006557CD /* MetronomeView.swift */; };
 		E82F0B4E2C00791800EBDB4A /* Music_SenseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F0B4D2C00791800EBDB4A /* Music_SenseApp.swift */; };
 		E82F0B502C00791800EBDB4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F0B4F2C00791800EBDB4A /* ContentView.swift */; };
 		E82F0B522C00791800EBDB4A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F0B512C00791800EBDB4A /* Item.swift */; };
@@ -21,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E81D34992C010AEA006557CD /* testCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testCode.swift; sourceTree = "<group>"; };
+		E81D349B2C010C7D006557CD /* LearnMusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnMusicView.swift; sourceTree = "<group>"; };
+		E81D349D2C010C8C006557CD /* ChordLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordLibraryView.swift; sourceTree = "<group>"; };
+		E81D349F2C010C9C006557CD /* MetronomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeView.swift; sourceTree = "<group>"; };
 		E82F0B4A2C00791800EBDB4A /* Music Sense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Music Sense.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E82F0B4D2C00791800EBDB4A /* Music_SenseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music_SenseApp.swift; sourceTree = "<group>"; };
 		E82F0B4F2C00791800EBDB4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +80,7 @@
 				E82F0B5E2C007BFD00EBDB4A /* View */,
 				E82F0B6B2C007E5800EBDB4A /* Music Data */,
 				E82F0B552C00791900EBDB4A /* Preview Content */,
+				E81D34992C010AEA006557CD /* testCode.swift */,
 			);
 			path = "Music Sense";
 			sourceTree = "<group>";
@@ -108,6 +117,9 @@
 			children = (
 				E82F0B652C007CAA00EBDB4A /* HomeScreenView.swift */,
 				E82F0B672C007CB600EBDB4A /* SplashScreenView.swift */,
+				E81D349B2C010C7D006557CD /* LearnMusicView.swift */,
+				E81D349D2C010C8C006557CD /* ChordLibraryView.swift */,
+				E81D349F2C010C9C006557CD /* MetronomeView.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -202,9 +214,13 @@
 				E82F0B502C00791800EBDB4A /* ContentView.swift in Sources */,
 				E82F0B522C00791800EBDB4A /* Item.swift in Sources */,
 				E82F0B662C007CAA00EBDB4A /* HomeScreenView.swift in Sources */,
+				E81D34A02C010C9C006557CD /* MetronomeView.swift in Sources */,
+				E81D349C2C010C7D006557CD /* LearnMusicView.swift in Sources */,
 				E82F0B642C007C9D00EBDB4A /* Music Card.swift in Sources */,
 				E82F0B6A2C007E3600EBDB4A /* Music.swift in Sources */,
 				E82F0B4E2C00791800EBDB4A /* Music_SenseApp.swift in Sources */,
+				E81D349A2C010AEA006557CD /* testCode.swift in Sources */,
+				E81D349E2C010C8C006557CD /* ChordLibraryView.swift in Sources */,
 				E82F0B6D2C007EFF00EBDB4A /* MusicDetailData.swift in Sources */,
 				E82F0B682C007CB600EBDB4A /* SplashScreenView.swift in Sources */,
 			);
