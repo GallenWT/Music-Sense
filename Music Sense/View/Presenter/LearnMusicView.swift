@@ -28,6 +28,7 @@ struct LearnMusicView: View {
                     MusicCardViewBox(musics: recentMusic, selectedMusic: $selectedMusic)
                         .padding(.top, 40)
                         .padding(.bottom, 40)
+            
                     Text("Recommended")
                         .font(.custom("RaleWay", size: 36))
                         .fontWeight(.semibold)
@@ -37,6 +38,7 @@ struct LearnMusicView: View {
                     MusicCardViewBox(musics: recommendedMusic, selectedMusic: $selectedMusic)
                         .padding(.top, 40)
                         .padding(.bottom, 40)
+                        
                     Text("Trending Song")
                         .font(.custom("RaleWay", size: 36))
                         .fontWeight(.semibold)
@@ -46,6 +48,7 @@ struct LearnMusicView: View {
                     MusicCardViewRec(musics: trendingMusic, selectedMusic: $selectedMusic)
                         .padding(.top, 40)
                         .padding(.bottom, 40)
+                        
                     Text("New Release")
                             .font(.custom("RaleWay", size: 36))
                             .fontWeight(.semibold)

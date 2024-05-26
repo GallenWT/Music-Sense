@@ -10,11 +10,22 @@ import SwiftUI
 struct ChordLibraryView: View {
     var body: some View {
         ZStack {
-            Rectangle()
-                .foregroundColor(Color("backgroundColor"))
-                .ignoresSafeArea()
-            Text("CHord Library View")
+//            Rectangle()
+//                .foregroundColor(Color("backgroundColor"))
+//                .ignoresSafeArea()
+            Image("chordListBg")
+                .resizable()
+                .frame(width: 1194, height: 900)
+            
+            Text("Chord Library View")
                 .foregroundColor(.white)
+            
+            
+            VStack{
+                HStack{
+//                    Text("C", "C#", "D", "D#", "E", "F", "F#", "G", "A", "A#", "B")
+                }
+            }
             
         }
     }

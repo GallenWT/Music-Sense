@@ -345,195 +345,208 @@
 ////            .previewLayout(.fixed(width: 800, height: 600))
 //    }
 //}
-
-//-----------------------------------------------------------------------------------------------------
-
+//
 //import SwiftUI
 //
-//struct ContentView2: View {
-//    @State private var selectedCard: Int?
+//struct ContentView1: View {
+//    @State private var textA: String = "Teks A"
+//    @State private var textB: String = "Teks B"
+//    @State private var textC: String = "Teks C"
+//    @State private var isTextAPressed: Bool = true
+//    @State private var isTextBPressed: Bool = false
 //
 //    var body: some View {
-//        NavigationSplitView {
-//            VStack {
-//                ForEach(1..<5) { index in
-//                    CardView(title: "Card \(index)", cardID: index, isSelected: selectedCard == index)
-//                        .onTapGesture {
-//                            selectedCard = index
-//                        }
-//                }
-//                Spacer()
-//            }
-//            .padding()
-//            .navigationDestination(
-//                isPresented: Binding(
-//                    get: { selectedCard != nil },
-//                    set: { if !$0 { selectedCard = nil } }
-//                ),
-//                destination: { DetailView(cardID: selectedCard ?? 0) }
-//            )
-//        } detail: {
-//            Text("DetailView")
-//        }
-//    }
-//}
-//
-//struct CardView: View {
-//    let title: String
-//    let cardID: Int
-//    let isSelected: Bool
-//    
-//    var body: some View {
-//        VStack {
-//            Text(title)
-//                .font(.title)
+//        VStack(spacing: 20) {
+//            Text(textA)
+//                .font(.largeTitle)
 //                .padding()
-//                .background(isSelected ? Color.blue : Color.gray)
-//                .foregroundColor(.white)
+//                .background(isTextAPressed ? Color.green : Color.clear)
+//                .cornerRadius(10)
+//                .onTapGesture {
+//                    isTextAPressed.toggle()
+//                    if isTextAPressed {
+//                        isTextBPressed = false
+//                        textC = "State 1"
+//                    } else {
+//                        textC = "Teks C"
+//                    }
+//                }
+//            
+//            Text(textB)
+//                .font(.largeTitle)
+//                .padding()
+//                .background(isTextBPressed ? Color.red : Color.clear)
+//                .cornerRadius(10)
+//                .onTapGesture {
+//                    isTextBPressed.toggle()
+//                    if isTextBPressed {
+//                        isTextAPressed = false
+//                        textC = "State 2"
+//                    } else {
+//                        textC = "Teks C"
+//                    }
+//                }
+//            
+//            Text(textC)
+//                .font(.largeTitle)
+//                .padding()
+//                .background(Color.yellow)
 //                .cornerRadius(10)
 //        }
-//        .padding(.vertical)
-//    }
-//}
-//
-//struct DetailView: View {
-//    let cardID: Int
-//    
-//    var body: some View {
-//        Text("Detail for Card \(cardID) skh")
-//            .font(.title)
-//            .padding()
+//        .padding()
 //    }
 //}
 //
 //struct ContentView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        ContentView2()
+//        ContentView1()
+//    }
+//}
+//--------------------------------------------------------------------------------------------
+//
+//import SwiftUI
+//
+//struct ChordLibraryView1: View {
+//    @State private var selectedChord: String? = nil
+//    @State private var selectedBassOption: String? = nil
+//
+//    var body: some View {
+//        NavigationView {
+//            List {
+//                Section(header: Text("Chords")) {
+//                    ForEach(0..<12, id: \.self) { index in
+//                        NavigationLink(
+//                            destination: ChordDetailView1(chord: ["C", "C#", "D", "D#", "E", "F", "F#", "G", "A", "A#", "B"][index]),
+//                            label: Text(["C", "C#", "D", "D#", "E", "F", "F#", "G", "A", "A#", "B"][index])
+//                        )
+//                    }
+//                }
+//
+//                Section(header: Text("Bass Options")) {
+//                    ForEach(0..<7, id: \.self) { index in
+//                        NavigationLink(
+//                            destination: BassOptionDetailView(bassOption: ["major", "minor", "5", "7", "maj7", "m7", "sus4", "addg"][index]),
+//                            label: Text(["major", "minor", "5", "7", "maj7", "m7", "sus4", "addg"][index])
+//                        )
+//                    }
+//                }
+//            }
+//            .navigationTitle("Chord Library")
+//            .navigationBarTitleDisplayMode(.inline)
+//        }
+//    }
+//}
+//
+//struct ChordDetailView1: View {
+//    let chord: String
+//
+//    var body: some View {
+//        VStack {
+//            Text(chord)
+//                .font(.largeTitle)
+//                .fontWeight(.bold)
+//
+//            // Add chord diagram or fretboard representation here
+//        }
+//        .navigationTitle(chord)
+//    }
+//}
+//
+//struct BassOptionDetailView: View {
+//    let bassOption: String
+//
+//    var body: some View {
+//        VStack {
+//            Text(bassOption)
+//                .font(.largeTitle)
+//                .fontWeight(.bold)
+//
+//            // Add bass option details here
+//        }
+//        .navigationTitle(bassOption)
+//    }
+//}
+//
+//struct ContentView1: View {
+//    var body: some View {
+//        ChordLibraryView1()
+//    }
+//}
+//
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView1()
 //    }
 //}
 
+
 import SwiftUI
 
-struct ContentView4: View {
-    @State private var selectedMusic: MusicDetail?
+struct ContentView1: View {
+    @State private var selectedChord: Chord = chordsMajor.first!
+    @State private var scrollOffset: CGFloat = 0
 
     var body: some View {
-        NavigationSplitView {
-            List {
-                MusicCardViewBox1(musics: recentMusic, selectedMusic: $selectedMusic)
-            }
-            .listStyle(SidebarListStyle())
-
-            
-        } detail: {
-//            if let selectedMusic = selectedMusic {
-//            
-//                    DetailView(music: selectedMusic)
-//            
-//            } else {
-                Text("Select a music")
-//            }
-        }
-        .onAppear {
-            // Close the detail view when the app first appears
-            selectedMusic = nil
-        }
-    }
-}
-
-//struct MusicCardViewBox1: View {
-//    var musics: [MusicDetail]
-//    @Binding var selectedMusic: MusicDetail?
-//
-//    var body: some View {
-//        ScrollView(.horizontal, showsIndicators: false) {
-//            HStack(spacing: 40) {
-//                ForEach(musics) { music in
-//                    //                    NavigationLink(destination: DetailView(music: music), tag: music, selection: $selectedMusic) {
-//                    //                        musicCardTemplateRec(music: music, isSelected: selectedMusic == music)
-//                    //                    }
-//                    NavigationLink(
-//                        destination: DetailView(music: music),
-//                        isActive: Binding<Bool>(
-//                            get: { selectedMusic == music },
-//                            set: { isActive in
-//                                if isActive {
-//                                    selectedMusic = music
-//                                }
-//                            }
-//                        ),
-//                        label: {
-//                            musicCardTemplateRec(music: music)
-//                        }
-//
-//                        }
-//                        }
-//                            .padding(.leading, 50)
-//                            .padding(.trailing, 50)
-//                            .padding(.bottom, 40)
-//                        }
-//                        }
-//                        }
-
-
-struct MusicCardViewBox1: View {
-    var musics: [MusicDetail]
-    @Binding var selectedMusic: MusicDetail?
-    
-    var body: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 40) {
-                ForEach(musics) { music in
-                    NavigationLink(
-                        destination: LearnMusicDetailView(music: music),
-                        isActive: Binding<Bool>(
-                            get: { selectedMusic == music },
-                            set: { _ in }
-                        )
-                    ) {
-                        musicCardTemplateBox(music: music, isSelected: selectedMusic == music)
+        VStack {
+            // Daftar Chord Horizontal yang Bisa Digeser
+            GeometryReader { geo in
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 40) {
+                        ForEach(chordsMajor) { chord in
+                            VStack {
+                                Text(chord.namaChord)
+                                    .font(.title)
+                                    .padding()
+                                    .background(selectedChord == chord ? Color.blue : Color.gray)
+                                    .cornerRadius(10)
+                                    .foregroundColor(.white)
+                                    .onTapGesture {
+                                        selectedChord = chord
+                                    }
+                            }
+                            .frame(width: geo.size.width / 3)
+                        }
                     }
+                    .padding(.horizontal, (geo.size.width - (geo.size.width / 3)) / 2)
+                    .background(GeometryReader { geo in
+                        Color.clear.preference(key: ScrollOffsetKey.self, value: geo.frame(in: .named("scroll")).minX)
+                    })
+                }
+                .coordinateSpace(name: "scroll")
+                .onPreferenceChange(ScrollOffsetKey.self) { value in
+                    updateSelectedChord(with: value, in: geo.size.width / 3)
                 }
             }
-            .padding(.leading, 50)
-            .padding(.trailing, 50)
-            .padding(.bottom, 40)
-        }
-    }
-}
+            .frame(height: 100)
 
-
-struct CardView: View {
-    let music: MusicDetail
-//    let isSelected: Bool
-    
-    var body: some View {
-        VStack(alignment: .leading) {
-            Image(music.coverMusic)
+            // Gambar Chord
+            Image(selectedChord.gambarChord)
                 .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 150, height: 150)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-                Text(music.judulMusic)
-                    .font(.custom("Raleway", size: 30))
-                    .fontWeight(.semibold)
-                    .lineLimit(1)
-                    .multilineTextAlignment(.leading)
-                    .foregroundColor(.white)
-                Text(music.singerMusic)
-                    .font(.custom("Raleway", size: 14))
-                    .fontWeight(.regular)
-                    .lineLimit(1)
-                    .foregroundColor(.white)
+                .scaledToFit()
+                .frame(height: 300)
+                .padding()
         }
-//        .background(isSelected ? Color.blue : Color.gray)
-        .cornerRadius(10)
+        .padding()
+    }
+
+    private func updateSelectedChord(with offset: CGFloat, in itemWidth: CGFloat) {
+        let index = Int((-offset + itemWidth / 2) / itemWidth)
+        if index >= 0 && index < chordsMajor.count {
+            selectedChord = chordsMajor[index]
+        }
     }
 }
 
+struct ScrollOffsetKey: PreferenceKey {
+    static var defaultValue: CGFloat = 0
+    static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
+        value = nextValue()
+    }
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView4()
+        ContentView1()
     }
 }
+

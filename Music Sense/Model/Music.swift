@@ -12,6 +12,10 @@ struct MusicDetail: Identifiable, Equatable , Hashable{
     var judulMusic: String
     var coverMusic: String
     var singerMusic: String
+    var youtubeMusic: String
+    var chordSimMusic: String
+    var chordOriMusic: String
+    var lyricMusic: String
     
     func hash(into hasher: inout Hasher) {
             hasher.combine(id)

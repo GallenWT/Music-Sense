@@ -15,9 +15,10 @@
 		E81D34A42C027651006557CD /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D34A32C027651006557CD /* SideBarView.swift */; };
 		E81D34A62C02FB48006557CD /* Search Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D34A52C02FB48006557CD /* Search Bar.swift */; };
 		E81D34A82C0315E4006557CD /* LearnMusicDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D34A72C0315E4006557CD /* LearnMusicDetailView.swift */; };
+		E81D34AA2C034B6F006557CD /* youtube.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D34A92C034B6F006557CD /* youtube.swift */; };
+		E81D34AC2C03990B006557CD /* Chord.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D34AB2C03990B006557CD /* Chord.swift */; };
+		E81D34AE2C039933006557CD /* ChordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D34AD2C039933006557CD /* ChordData.swift */; };
 		E82F0B4E2C00791800EBDB4A /* Music_SenseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F0B4D2C00791800EBDB4A /* Music_SenseApp.swift */; };
-		E82F0B502C00791800EBDB4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F0B4F2C00791800EBDB4A /* ContentView.swift */; };
-		E82F0B522C00791800EBDB4A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F0B512C00791800EBDB4A /* Item.swift */; };
 		E82F0B542C00791900EBDB4A /* Color Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E82F0B532C00791900EBDB4A /* Color Assets.xcassets */; };
 		E82F0B572C00791900EBDB4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E82F0B562C00791900EBDB4A /* Preview Assets.xcassets */; };
 		E82F0B622C007C7300EBDB4A /* Music Cover Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E82F0B612C007C7300EBDB4A /* Music Cover Assets.xcassets */; };
@@ -37,10 +38,11 @@
 		E81D34A32C027651006557CD /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		E81D34A52C02FB48006557CD /* Search Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Search Bar.swift"; sourceTree = "<group>"; };
 		E81D34A72C0315E4006557CD /* LearnMusicDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnMusicDetailView.swift; sourceTree = "<group>"; };
+		E81D34A92C034B6F006557CD /* youtube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = youtube.swift; sourceTree = "<group>"; };
+		E81D34AB2C03990B006557CD /* Chord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chord.swift; sourceTree = "<group>"; };
+		E81D34AD2C039933006557CD /* ChordData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordData.swift; sourceTree = "<group>"; };
 		E82F0B4A2C00791800EBDB4A /* Music Sense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Music Sense.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E82F0B4D2C00791800EBDB4A /* Music_SenseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music_SenseApp.swift; sourceTree = "<group>"; };
-		E82F0B4F2C00791800EBDB4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		E82F0B512C00791800EBDB4A /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		E82F0B532C00791900EBDB4A /* Color Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Color Assets.xcassets"; sourceTree = "<group>"; };
 		E82F0B562C00791900EBDB4A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E82F0B612C007C7300EBDB4A /* Music Cover Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Music Cover Assets.xcassets"; sourceTree = "<group>"; };
@@ -82,13 +84,12 @@
 			isa = PBXGroup;
 			children = (
 				E82F0B4D2C00791800EBDB4A /* Music_SenseApp.swift */,
-				E82F0B4F2C00791800EBDB4A /* ContentView.swift */,
-				E82F0B512C00791800EBDB4A /* Item.swift */,
 				E82F0B5D2C007BEC00EBDB4A /* Model */,
 				E82F0B5E2C007BFD00EBDB4A /* View */,
-				E82F0B6B2C007E5800EBDB4A /* Music Data */,
+				E82F0B6B2C007E5800EBDB4A /* Data */,
 				E82F0B552C00791900EBDB4A /* Preview Content */,
 				E81D34992C010AEA006557CD /* testCode.swift */,
+				E81D34A12C0224F7006557CD /* TestCode1.swift */,
 			);
 			path = "Music Sense";
 			sourceTree = "<group>";
@@ -107,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				E82F0B692C007E3600EBDB4A /* Music.swift */,
+				E81D34A92C034B6F006557CD /* youtube.swift */,
+				E81D34AB2C03990B006557CD /* Chord.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -138,18 +141,18 @@
 			isa = PBXGroup;
 			children = (
 				E82F0B632C007C9D00EBDB4A /* Music Card.swift */,
-				E81D34A12C0224F7006557CD /* TestCode1.swift */,
 				E81D34A52C02FB48006557CD /* Search Bar.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
 		};
-		E82F0B6B2C007E5800EBDB4A /* Music Data */ = {
+		E82F0B6B2C007E5800EBDB4A /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				E82F0B6C2C007EFF00EBDB4A /* MusicDetailData.swift */,
+				E81D34AD2C039933006557CD /* ChordData.swift */,
 			);
-			path = "Music Data";
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,11 +226,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E82F0B502C00791800EBDB4A /* ContentView.swift in Sources */,
-				E82F0B522C00791800EBDB4A /* Item.swift in Sources */,
+				E81D34AE2C039933006557CD /* ChordData.swift in Sources */,
+				E81D34AA2C034B6F006557CD /* youtube.swift in Sources */,
 				E82F0B662C007CAA00EBDB4A /* HomeScreenView.swift in Sources */,
 				E81D34A02C010C9C006557CD /* MetronomeView.swift in Sources */,
 				E81D34A22C0224F7006557CD /* TestCode1.swift in Sources */,
+				E81D34AC2C03990B006557CD /* Chord.swift in Sources */,
 				E81D34A42C027651006557CD /* SideBarView.swift in Sources */,
 				E81D34A82C0315E4006557CD /* LearnMusicDetailView.swift in Sources */,
 				E81D349C2C010C7D006557CD /* LearnMusicView.swift in Sources */,
