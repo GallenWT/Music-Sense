@@ -25,7 +25,8 @@ struct Music_SenseApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            SplashScreenView()
         }
         .modelContainer(sharedModelContainer)
     }

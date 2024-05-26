@@ -15,7 +15,7 @@ let recentMusic = [
     MusicDetail(judulMusic: "Blind", coverMusic: "sza1", singerMusic: "SZA"),
     MusicDetail(judulMusic: "Youth", coverMusic: "youth", singerMusic: "Troye Sivan"),
     MusicDetail(judulMusic: "Fools", coverMusic: "fools", singerMusic: "Troye Sivan"),
-    MusicDetail(judulMusic: "Open Arms", coverMusic: "sza1", singerMusic: "SZA")
+    MusicDetail(judulMusic: "SOS", coverMusic: "sza1", singerMusic: "SZA")
 ]
 
 let recommendedMusic = [
@@ -45,9 +45,9 @@ let newMusic = [
     MusicDetail(judulMusic: "Living Proof", coverMusic: "livingProof", singerMusic: "Bon Jovi"),
     MusicDetail(judulMusic: "Chihiro", coverMusic: "billieEilish", singerMusic: "Billie Eilish"),
     MusicDetail(judulMusic: "Stardust", coverMusic: "zayn", singerMusic: "ZAYN"),
-    MusicDetail(judulMusic: "Girls Like Me Don't Cry", coverMusic: "girlsLike", singerMusic: "Thuy"),
+    MusicDetail(judulMusic: "Supernova", coverMusic: "supernova", singerMusic: "aespa"),
     MusicDetail(judulMusic: "How It Feels", coverMusic: "zayn", singerMusic: "ZAYN"),
     MusicDetail(judulMusic: "Space", coverMusic: "space", singerMusic: "Tiffany Hill"),
-    MusicDetail(judulMusic: "High Priestess", coverMusic: "highPriestess", singerMusic: "Yaima")
+    MusicDetail(judulMusic: "High Priest", coverMusic: "highPriestess", singerMusic: "Yaima")
     
 ]

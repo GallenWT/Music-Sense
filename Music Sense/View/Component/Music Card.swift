@@ -21,7 +21,7 @@ struct MusicCardViewBox: View {
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                         VStack(alignment: .leading) {
                             Text(music.judulMusic)
-                                .font(.custom("Raleway", size: 32))
+                                .font(.custom("Raleway", size: 30))
                                 .fontWeight(.semibold)
                                 .lineLimit(1)
                                 .multilineTextAlignment(.leading)
@@ -38,6 +38,7 @@ struct MusicCardViewBox: View {
             }
             .padding(.leading, 50)
             .padding(.trailing, 50)
+            .padding(.bottom, 40)
         }
     }
 }
@@ -56,9 +57,10 @@ struct MusicCardViewRec: View {
                             .frame(width: 250, height: 150)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                         Text(music.judulMusic)
-                            .font(.custom("Raleway", size: 32))
+                            .font(.custom("Raleway", size: 30))
                             .fontWeight(.semibold)
                             .lineLimit(1)
+                            .foregroundColor(.white)
 //                            .multilineTextAlignment(.leading)
 //                            .frame(width:250)
                             
@@ -66,11 +68,13 @@ struct MusicCardViewRec: View {
                             .font(.custom("Raleway", size: 14))
                             .fontWeight(.regular)
                             .lineLimit(1)
+                            .foregroundColor(.white)
                     }
                 }
             }
             .padding(.leading, 50)
             .padding(.trailing, 50)
+            .padding(.bottom, 40)
         }
     }
 }
