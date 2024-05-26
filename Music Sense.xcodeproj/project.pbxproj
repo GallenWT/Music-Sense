@@ -14,6 +14,7 @@
 		E81D34A22C0224F7006557CD /* TestCode1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D34A12C0224F7006557CD /* TestCode1.swift */; };
 		E81D34A42C027651006557CD /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D34A32C027651006557CD /* SideBarView.swift */; };
 		E81D34A62C02FB48006557CD /* Search Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D34A52C02FB48006557CD /* Search Bar.swift */; };
+		E81D34A82C0315E4006557CD /* LearnMusicDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D34A72C0315E4006557CD /* LearnMusicDetailView.swift */; };
 		E82F0B4E2C00791800EBDB4A /* Music_SenseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F0B4D2C00791800EBDB4A /* Music_SenseApp.swift */; };
 		E82F0B502C00791800EBDB4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F0B4F2C00791800EBDB4A /* ContentView.swift */; };
 		E82F0B522C00791800EBDB4A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F0B512C00791800EBDB4A /* Item.swift */; };
@@ -35,6 +36,7 @@
 		E81D34A12C0224F7006557CD /* TestCode1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCode1.swift; sourceTree = "<group>"; };
 		E81D34A32C027651006557CD /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		E81D34A52C02FB48006557CD /* Search Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Search Bar.swift"; sourceTree = "<group>"; };
+		E81D34A72C0315E4006557CD /* LearnMusicDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnMusicDetailView.swift; sourceTree = "<group>"; };
 		E82F0B4A2C00791800EBDB4A /* Music Sense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Music Sense.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E82F0B4D2C00791800EBDB4A /* Music_SenseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music_SenseApp.swift; sourceTree = "<group>"; };
 		E82F0B4F2C00791800EBDB4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,7 +89,6 @@
 				E82F0B6B2C007E5800EBDB4A /* Music Data */,
 				E82F0B552C00791900EBDB4A /* Preview Content */,
 				E81D34992C010AEA006557CD /* testCode.swift */,
-				E81D34A12C0224F7006557CD /* TestCode1.swift */,
 			);
 			path = "Music Sense";
 			sourceTree = "<group>";
@@ -128,6 +129,7 @@
 				E81D349D2C010C8C006557CD /* ChordLibraryView.swift */,
 				E81D349F2C010C9C006557CD /* MetronomeView.swift */,
 				E81D34A32C027651006557CD /* SideBarView.swift */,
+				E81D34A72C0315E4006557CD /* LearnMusicDetailView.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				E82F0B632C007C9D00EBDB4A /* Music Card.swift */,
+				E81D34A12C0224F7006557CD /* TestCode1.swift */,
 				E81D34A52C02FB48006557CD /* Search Bar.swift */,
 			);
 			path = Component;
@@ -226,6 +229,7 @@
 				E81D34A02C010C9C006557CD /* MetronomeView.swift in Sources */,
 				E81D34A22C0224F7006557CD /* TestCode1.swift in Sources */,
 				E81D34A42C027651006557CD /* SideBarView.swift in Sources */,
+				E81D34A82C0315E4006557CD /* LearnMusicDetailView.swift in Sources */,
 				E81D349C2C010C7D006557CD /* LearnMusicView.swift in Sources */,
 				E82F0B642C007C9D00EBDB4A /* Music Card.swift in Sources */,
 				E82F0B6A2C007E3600EBDB4A /* Music.swift in Sources */,

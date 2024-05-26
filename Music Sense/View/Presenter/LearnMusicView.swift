@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct LearnMusicView: View {
+    @State private var selectedMusic: MusicDetail?
+    
     var body: some View {
         ZStack {
             Rectangle()
@@ -23,7 +25,7 @@ struct LearnMusicView: View {
                         .foregroundStyle(.white)
                         .padding(.top, 40)
                         .padding(.leading, 40)
-                    MusicCardViewBox(musics: recentMusic)
+                    MusicCardViewBox(musics: recentMusic, selectedMusic: $selectedMusic)
                         .padding(.top, 40)
                         .padding(.bottom, 40)
                     Text("Recommended")
@@ -32,7 +34,7 @@ struct LearnMusicView: View {
                         .foregroundStyle(.white)
                         .padding(.top, 40)
                         .padding(.leading, 40)
-                    MusicCardViewBox(musics: recommendedMusic)
+                    MusicCardViewBox(musics: recommendedMusic, selectedMusic: $selectedMusic)
                         .padding(.top, 40)
                         .padding(.bottom, 40)
                     Text("Trending Song")
@@ -41,7 +43,7 @@ struct LearnMusicView: View {
                         .foregroundStyle(.white)
                         .padding(.top, 40)
                         .padding(.leading, 40)
-                    MusicCardViewRec(musics: trendingMusic)
+                    MusicCardViewRec(musics: trendingMusic, selectedMusic: $selectedMusic)
                         .padding(.top, 40)
                         .padding(.bottom, 40)
                     Text("New Release")
@@ -50,7 +52,7 @@ struct LearnMusicView: View {
                         .foregroundStyle(.white)
                         .padding(.top, 40)
                         .padding(.leading, 40)
-                    MusicCardViewBox(musics: newMusic)
+                        MusicCardViewBox(musics: newMusic, selectedMusic: $selectedMusic)
                         .padding(.top, 40)
                         .padding(.bottom, 40)
                 }

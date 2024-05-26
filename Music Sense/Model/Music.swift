@@ -7,9 +7,17 @@
 
 import Foundation
 
-struct MusicDetail: Identifiable {
+struct MusicDetail: Identifiable, Equatable , Hashable{
     var id = UUID()
     var judulMusic: String
     var coverMusic: String
     var singerMusic: String
+    
+    func hash(into hasher: inout Hasher) {
+            hasher.combine(id)
+        }
+    
+    static func == (lhs: MusicDetail, rhs: MusicDetail) -> Bool {
+           return lhs.id == rhs.id // bandingkan berdasarkan id
+       }
 }

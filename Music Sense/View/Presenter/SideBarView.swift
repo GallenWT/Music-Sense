@@ -9,7 +9,67 @@ import SwiftUI
 
 struct SideBarView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Rectangle()
+                .foregroundColor(Color("sidebarColor"))
+                .ignoresSafeArea()
+            VStack(alignment: .leading){
+                Text("Menu")
+                    .font(.custom("Raleway", size: 36))
+                    .foregroundColor(.white)
+                    .fontWeight(.semibold)
+                    .padding(30)
+                Rectangle()
+                    .foregroundColor(Color("lineColor"))
+                    .frame(height: 1)
+                NavigationLink(destination: LearnMusicView()) {
+                    HStack {
+                        Image("learnMusic")
+                            .resizable()
+                            .frame(width: 60, height: 60)
+                            .aspectRatio(contentMode: .fit)
+                        Text("Learn Music")
+                            .foregroundColor(.white)
+                            .font(.title)
+                    }
+                }.padding(30)
+                Rectangle()
+                    .foregroundColor(Color("lineColor"))
+                    .frame(height: 1)
+                NavigationLink(destination: ChordLibraryView()) {
+                    
+                    HStack {
+                        Image("chordLibrary")
+                            .resizable()
+                            .frame(width: 60, height: 60)
+                            .aspectRatio(contentMode: .fit)
+                        Text("Chord Library")
+                            .foregroundColor(.white)
+                            .font(.title)
+                    }
+                }.padding(30)
+                Rectangle()
+                    .foregroundColor(Color("lineColor"))
+                    .frame(height: 1)
+                NavigationLink(destination: MetronomeView()) {
+                    HStack {
+                        Image("metronome")
+                            .resizable()
+                            .frame(width: 60, height: 60)
+                            .aspectRatio(contentMode: .fit)
+                        Text("Metronome")
+                            .foregroundColor(.white)
+                            .font(.title)
+                    }
+                    
+                }.padding(30)
+                Rectangle()
+                    .foregroundColor(Color("lineColor"))
+                    .frame(height: 1)
+            }
+                        .padding(.bottom, 80)
+            
+        }
     }
 }
 

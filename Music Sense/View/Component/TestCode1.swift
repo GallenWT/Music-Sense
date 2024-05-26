@@ -345,3 +345,195 @@
 ////            .previewLayout(.fixed(width: 800, height: 600))
 //    }
 //}
+
+//-----------------------------------------------------------------------------------------------------
+
+//import SwiftUI
+//
+//struct ContentView2: View {
+//    @State private var selectedCard: Int?
+//
+//    var body: some View {
+//        NavigationSplitView {
+//            VStack {
+//                ForEach(1..<5) { index in
+//                    CardView(title: "Card \(index)", cardID: index, isSelected: selectedCard == index)
+//                        .onTapGesture {
+//                            selectedCard = index
+//                        }
+//                }
+//                Spacer()
+//            }
+//            .padding()
+//            .navigationDestination(
+//                isPresented: Binding(
+//                    get: { selectedCard != nil },
+//                    set: { if !$0 { selectedCard = nil } }
+//                ),
+//                destination: { DetailView(cardID: selectedCard ?? 0) }
+//            )
+//        } detail: {
+//            Text("DetailView")
+//        }
+//    }
+//}
+//
+//struct CardView: View {
+//    let title: String
+//    let cardID: Int
+//    let isSelected: Bool
+//    
+//    var body: some View {
+//        VStack {
+//            Text(title)
+//                .font(.title)
+//                .padding()
+//                .background(isSelected ? Color.blue : Color.gray)
+//                .foregroundColor(.white)
+//                .cornerRadius(10)
+//        }
+//        .padding(.vertical)
+//    }
+//}
+//
+//struct DetailView: View {
+//    let cardID: Int
+//    
+//    var body: some View {
+//        Text("Detail for Card \(cardID) skh")
+//            .font(.title)
+//            .padding()
+//    }
+//}
+//
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView2()
+//    }
+//}
+
+import SwiftUI
+
+struct ContentView4: View {
+    @State private var selectedMusic: MusicDetail?
+
+    var body: some View {
+        NavigationSplitView {
+            List {
+                MusicCardViewBox1(musics: recentMusic, selectedMusic: $selectedMusic)
+            }
+            .listStyle(SidebarListStyle())
+
+            
+        } detail: {
+//            if let selectedMusic = selectedMusic {
+//            
+//                    DetailView(music: selectedMusic)
+//            
+//            } else {
+                Text("Select a music")
+//            }
+        }
+        .onAppear {
+            // Close the detail view when the app first appears
+            selectedMusic = nil
+        }
+    }
+}
+
+//struct MusicCardViewBox1: View {
+//    var musics: [MusicDetail]
+//    @Binding var selectedMusic: MusicDetail?
+//
+//    var body: some View {
+//        ScrollView(.horizontal, showsIndicators: false) {
+//            HStack(spacing: 40) {
+//                ForEach(musics) { music in
+//                    //                    NavigationLink(destination: DetailView(music: music), tag: music, selection: $selectedMusic) {
+//                    //                        musicCardTemplateRec(music: music, isSelected: selectedMusic == music)
+//                    //                    }
+//                    NavigationLink(
+//                        destination: DetailView(music: music),
+//                        isActive: Binding<Bool>(
+//                            get: { selectedMusic == music },
+//                            set: { isActive in
+//                                if isActive {
+//                                    selectedMusic = music
+//                                }
+//                            }
+//                        ),
+//                        label: {
+//                            musicCardTemplateRec(music: music)
+//                        }
+//
+//                        }
+//                        }
+//                            .padding(.leading, 50)
+//                            .padding(.trailing, 50)
+//                            .padding(.bottom, 40)
+//                        }
+//                        }
+//                        }
+
+
+struct MusicCardViewBox1: View {
+    var musics: [MusicDetail]
+    @Binding var selectedMusic: MusicDetail?
+    
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 40) {
+                ForEach(musics) { music in
+                    NavigationLink(
+                        destination: LearnMusicDetailView(music: music),
+                        isActive: Binding<Bool>(
+                            get: { selectedMusic == music },
+                            set: { _ in }
+                        )
+                    ) {
+                        musicCardTemplateBox(music: music, isSelected: selectedMusic == music)
+                    }
+                }
+            }
+            .padding(.leading, 50)
+            .padding(.trailing, 50)
+            .padding(.bottom, 40)
+        }
+    }
+}
+
+
+struct CardView: View {
+    let music: MusicDetail
+//    let isSelected: Bool
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            Image(music.coverMusic)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 150, height: 150)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                Text(music.judulMusic)
+                    .font(.custom("Raleway", size: 30))
+                    .fontWeight(.semibold)
+                    .lineLimit(1)
+                    .multilineTextAlignment(.leading)
+                    .foregroundColor(.white)
+                Text(music.singerMusic)
+                    .font(.custom("Raleway", size: 14))
+                    .fontWeight(.regular)
+                    .lineLimit(1)
+                    .foregroundColor(.white)
+        }
+//        .background(isSelected ? Color.blue : Color.gray)
+        .cornerRadius(10)
+    }
+}
+
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView4()
+    }
+}
