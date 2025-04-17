@@ -26,3 +26,8 @@ What makes Music Sense unique is its ability to **transform audio signals into t
 - **Swift / SwiftUI** – iOS development  
 - **AVFoundation** – audio signal processing  
 - **Core Haptics** – tactile feedback integration  
+
+---
+
+## 👨‍🎨 Author
+Designed & developed by [Gallen Winslow Tantosa](https://github.com/gallenwt)
