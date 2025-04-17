@@ -27,13 +27,15 @@ What makes Music Sense unique is its ability to **transform audio signals into t
 ⚠️ This project is **still in early development**.  
 Only the main UI pages have been designed and developed so far. Core features such as tutorials, chord interaction, metronome, and haptic conversion are **not yet implemented**. This repository currently serves as a **work-in-progress prototype**.
 
-
 ## 👨‍🎨 Author
 Designed & developed by [Gallen Winslow Tantosa](https://github.com/gallenwt)
 
 ## 🌐 Learn More  
 For a deeper look into the design process, goals, and implementation insights of this project,  
 please visit my portfolio: [bit.ly/gwtportfolio](https://bit.ly/gwtportfolio)
+
+## 📩 Feedback  
+We appreciate any feedback, suggestions, or ideas to enhance the game experience and deepen its impact.
 
 ## © Copyright  
 © 2025 Gallen Winslow Tantosa. All rights reserved.  
