@@ -34,3 +34,7 @@ Designed & developed by [Gallen Winslow Tantosa](https://github.com/gallenwt)
 ## 🌐 Learn More  
 For a deeper look into the design process, goals, and implementation insights of this project,  
 please visit my portfolio: [bit.ly/gwtportfolio](https://bit.ly/gwtportfolio)
+
+## © Copyright  
+© 2025 Gallen Winslow Tantosa. All rights reserved.  
+This project was developed for educational purposes. Please do not reproduce or distribute without permission.
